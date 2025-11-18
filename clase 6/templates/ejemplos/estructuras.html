@@ -1,0 +1,42 @@
+{{template "header"}}
+
+<!--contenido-->
+<main class="container">
+  <h1>Estructuras</h1>
+  <h3>Declaracion de estructuras</h3>
+  {{with $valor:="mi valor con with"}} {{end}}
+
+  <hr />
+  <h3>Valores Struct</h3>
+  <ul>
+    <li>Nombre: {{.Nombre}}</li>
+    <li>Edad: {{.Edad}}</li>
+    <li>Perfil: {{.Perfil}}</li>
+  </ul>
+  <hr />
+  <h3>Condicionales</h3>
+  <h4>mayor o igual</h4>
+  {{if ge .Edad 18}}
+  <p>Eres mayor</p>
+  {{else}}
+  <p>Eres menor</p>
+  {{end}}
+  <h4>igual</h4>
+  {{if eq .Perfil 1}}
+  <p>Eres Admin</p>
+  {{else}}
+  <p>Eres no Admin</p>
+  {{end}}
+
+  <hr />
+  <h3>Iteraciones</h3>
+  {{.Habilidades}}
+  <ul>
+    {{range .Habilidades}}
+    <li>{{.Nombre}}</li>
+    {{end}}
+  </ul>
+</main>
+<!--contenido-->
+
+{{template "pie"}}

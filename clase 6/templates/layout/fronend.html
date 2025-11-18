@@ -1,0 +1,103 @@
+{{define "header"}}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/public/images/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso GO lang</title>
+    <meta name="keywords " content="G, GO lang" />
+    <meta name="description" content="Go Web" />
+    <meta name="author" content="Rids" />
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <link
+    href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&amp;display=swap"
+    rel="stylesheet"
+  />
+  <link href="/public/css/blog.css" rel="stylesheet" />
+  <body>
+    <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <a class="link-secondary" href="#">Subscribe</a>
+          </div>
+          <div class="col-4 text-center">
+            <a class="blog-header-logo text-dark" href="/">
+              <img src="/public/images/logo.png" alt="logo" />
+            </a>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <a class="link-secondary" href="#" aria-label="Search">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="mx-3"
+                role="img"
+                viewBox="0 0 24 24"
+                style="--darkreader-inline-stroke: currentColor"
+                data-darkreader-inline-stroke=""
+              >
+                <title>Search</title>
+                <circle cx="10.5" cy="10.5" r="7.5"></circle>
+                <path d="M21 21l-5.2-5.2"></path>
+              </svg>
+            </a>
+            <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+          <a class="p-2 link-secondary" href="/">Home</a>
+          <a class="p-2 link-secondary" href="/nosotros">Nosotros</a>
+          <a class="p-2 link-secondary" href="/parametros/1/ss">Parametros</a>
+          <a class="p-2 link-secondary" href="/querystring?id=4&slug=zzz"
+            >QueryString</a
+          >
+          <a class="p-2 link-secondary" href="/estructuras">Estructuras</a>
+        </nav>
+      </div>
+    </div>
+    {{end}}
+
+    <main class="container">
+      <h1>curso golang</h1>
+      <img src="/public/images/golang.png" alt="" />
+    </main>
+    {{define "pie"}}
+    <footer class="blog-footer">
+      <p>
+        Blog template built by Riddikuluz &
+        <a href="https://getbootstrap.com/" target="_blank"> Bootstrap</a> by
+        <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.
+      </p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+    {{end}}
+  </body>
+</html>
