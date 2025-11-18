@@ -1,0 +1,52 @@
+{{template "header"}}
+
+<!--contenido-->
+<main class="container">
+  <h1>Formularios</h1>
+  {{if ne .css ""}}
+  <div class="alert alert-{{.css}} alert-dismissible fade show">
+    {{.mensaje}}
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  {{end}}
+  <div class="row">
+    <form action="/formularios-post" method="POST">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" />
+      </div>
+      <div class="form-group">
+        <label for="correo">Email:</label>
+        <input type="text" class="form-control" id="correo" name="correo" />
+      </div>
+      <div class="form-group">
+        <label for="telefono">Telefono:</label>
+        <input type="text" class="form-control" id="telefono" name="telefono" />
+      </div>
+      <div class="form-group">
+        <label for="contrasena">Contraseña:</label>
+        <input
+          type="password"
+          class="form-control"
+          id="contrasena"
+          name="contrasena"
+        />
+      </div>
+      <button
+        type="submit"
+        value="Enviar"
+        title="Enviar"
+        class="btn btn-primary"
+      >
+        Enviar
+      </button>
+    </form>
+  </div>
+</main>
+<!--contenido-->
+{{template "pie"}}
